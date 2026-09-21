@@ -144,7 +144,7 @@ export default function ListingPage() {
 
   // Smooth scroll handler
   const handleScrollToSection = (sectionName: string) => {
-    let targetId = sectionName.toLowerCase();
+    const targetId = sectionName.toLowerCase();
     if (targetId === "photos" || targetId === "overview") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
@@ -322,7 +322,7 @@ export default function ListingPage() {
           houseRules={listing.houseRules}
           safetyPolicies={listing.safetyPolicies}
           cancellationPolicy={listing.cancellationPolicy}
-          cancellationPolicyDetails={(listing as any).cancellationPolicyDetails}
+          cancellationPolicyDetails={listing.cancellationPolicyDetails}
         />
 
         {/* Similar Stays Carousel */}
